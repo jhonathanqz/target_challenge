@@ -3,11 +3,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
 
 import 'package:target_challenge/shared/style/style_theme.dart';
+import 'package:target_challenge/shared/widgets/footer/privacy_footer.dart';
 
 import '../../../../../shared/widgets/scaffold/scaffold_primary.dart';
 import '../controller/login_controller.dart';
 
-import 'widgets/login_footer.dart';
 import 'widgets/login_form.dart';
 
 class LoginPage extends StatefulWidget {
@@ -45,7 +45,7 @@ class LoginPageState extends State<LoginPage> {
     return Observer(builder: (context) {
       return ScaffoldPrimary(
         isLoading: _controller.isLoading,
-        footer: LoginFooter(
+        footer: PrivacyFooter(
           onTap: () => _controller.privacyPolicy(),
         ),
         child: Container(

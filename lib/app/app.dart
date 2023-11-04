@@ -5,9 +5,7 @@ import 'package:flutter_modular/flutter_modular.dart';
 import '../shared/style/style_theme.dart';
 
 class App extends StatelessWidget {
-  const App({
-    super.key,
-  });
+  const App({super.key});
 
   @override
   Widget build(BuildContext context) {

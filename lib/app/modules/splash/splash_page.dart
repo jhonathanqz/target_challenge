@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 
 import 'package:target_challenge/app/modules/splash/splash_store.dart';
+import 'package:target_challenge/shared/style/style_theme.dart';
+import 'package:target_challenge/shared/widgets/loading/color_loader.dart';
+import 'package:target_challenge/shared/widgets/scaffold/scaffold_primary.dart';
 
 class SplashPage extends StatefulWidget {
   final SplashStore store;
@@ -24,15 +27,21 @@ class SplashPageState extends State<SplashPage> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Column(
-        children: [
-          Icon(
-            Icons.home,
-            size: 50,
-          )
-        ],
-      ),
-    );
+    return ScaffoldPrimary(
+        child: Column(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        Text(
+          'Projeto desafio Target',
+          style: Style.fieldStyle.big32(),
+        ),
+        Style.spacing.xl,
+        ColorLoader(
+          dotOneColor: Style.theme.white,
+          dotTwoColor: Style.theme.grey,
+          dotThreeColor: Style.theme.grey7,
+        ),
+      ],
+    ));
   }
 }
