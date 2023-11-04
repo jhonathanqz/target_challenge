@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 
 import 'package:target_challenge/shared/style/style_theme.dart';
 
-class LoginFooter extends StatelessWidget {
+class PrivacyFooter extends StatelessWidget {
   final Function() onTap;
 
-  const LoginFooter({
+  const PrivacyFooter({
     super.key,
     required this.onTap,
   });
